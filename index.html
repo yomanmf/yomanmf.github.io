@@ -14,9 +14,9 @@
     .ua_js_yes .card{opacity:0;-webkit-transition:opacity .4s ease-in-out;transition:opacity .4s ease-in-out}
     .ua_js_yes .card_visible{opacity:1}
     .card{width:553px;height:300px;margin:auto;left:0;top:0;bottom:0;right:0;-webkit-perspective:1000px;perspective:1000px}
-    .card__text{top:36px;left:190px;width:320px}
+    .card__text{top:40px;left:120px;width:320px}
     .card__side{width:553px;height:300px;top:0;left:0}
-    .card__rectangle{z-index:2;width:465px;height:300px;background:rgba(255,255,255,.95);border-radius:24px;box-shadow:0 32px 60px rgba(4,29,85,.35);overflow:hidden}
+    .card__rectangle{z-index:2;width:465px;height:300px;background:rgba(255,255,255,.95);border-radius:24px;box-shadow:0 32px 60px rgba(4,29,85,.35);overflow:hidden;padding:0 32px}
     .card__side::after{content:'';left:100%;margin-left:-90px;position:absolute;border-color:rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,.2);border-style:solid;border-width:150px 0 150px 85px;width:0;height:0;-webkit-transform:skewX(-6deg);transform:skewX(-6deg);z-index:3}
     .card__title{margin-bottom:12px}
     .card__gap{height:12px}
@@ -31,16 +31,12 @@
     .card_animation .card__side_state_closed,.card_animation .card__side_state_opened{-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
     .card__side_state_closed{-webkit-transform:rotateX(180deg);transform:rotateX(180deg)}
     .card__side_state_opened{z-index:2;-webkit-transform:rotateX(0);transform:rotateX(0)}
-    .card__switch{z-index:10;top:312px;right:88px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#c9d7ff}
-    .card__switch .card__link{margin-left:10px}
     .card__link,.mobile .card__phone-link{text-decoration:none;color:#005bff;font-weight:500}
     .card__link:hover,.mobile .card__phone-link:hover{color:#f91155}
     .card__link_disabled_yes,.card__phone-link{color:#2d4062;text-decoration:none;cursor:default}
     .card__link_disabled_yes:visited,.card__phone-link:visited{color:#2d4062}
     .card__link_disabled_yes:hover,.card__phone-link:hover{text-decoration:none}
-    .card__logo{position:absolute;left:32px;top:52px;width:170px;height:52px;background-image:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27220%27 height=%2760%27 viewBox=%270 0 220 60%27%3E%3Cg fill=%27none%27 fill-rule=%27evenodd%27%3E%3Ccircle cx=%2738%27 cy=%279%27 r=%278%27 fill=%27%23f91155%27/%3E%3Cpath fill=%27%23005BFF%27 d=%27M24 10C12.954 10 4 18.954 4 30s8.954 20 20 20 20-8.954 20-20S35.046 10 24 10zm0 30c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10zM54 10h40v8L68 42h26v8H46v-8l26-24H54zM118 10c-11.046 0-20 8.954-20 20s8.954 20 20 20 20-8.954 20-20-8.954-20-20-20zm0 30c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10zM148 10h12l22 24V10h10v40h-12l-22-24v24h-10z%27/%3E%3Ctext fill=%27%230F1F3C%27 font-family=%27Inter, Arial, sans-serif%27 font-size=%2716%27 font-weight=%27600%27%3E%3Ctspan x=%27182%27 y=%2743%27%3EBANK%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat}
-    .card__logo span{position:absolute;left:-9999px}
-    @media only screen and (max-width:768px){.card{width:90vw;height:56vw;max-width:600px;max-height:360px}.card__rectangle{border-radius:20px}.card__text{left:36%;top:10%}.card__switch{font-size:24px;right:12vw;top:calc(56vw + 20px)}.card__switch .card__link{margin-left:24px}}
+    @media only screen and (max-width:768px){.card{width:90vw;height:56vw;max-width:600px;max-height:360px}.card__rectangle{border-radius:20px;padding:0 24px}.card__text{left:12vw;top:12%}}
   </style>
   <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2764%27%20height%3D%2764%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%25%27%20y1%3D%27100%25%27%20x2%3D%27100%25%27%20y2%3D%270%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f91155%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23005bff%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27url(%23g)%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2754%25%27%20font-size%3D%2726%27%20font-family%3D%27Arial%27%20font-weight%3D%27700%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3EOZ%3C/text%3E%3C/svg%3E"/>
 </head>
@@ -48,7 +44,6 @@
   <div class="card i-bem" data-bem='{"card":{"titles":{"ru":"Александр Савельев — Озон Банк","en":"Alexander Savelyev — Ozon Bank"},"favicons":{"ru":"data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2764%27%20height%3D%2764%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%25%27%20y1%3D%27100%25%27%20x2%3D%27100%25%27%20y2%3D%270%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f91155%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23005bff%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27url(%23g)%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2754%25%27%20font-size%3D%2726%27%20font-family%3D%27Arial%27%20font-weight%3D%27700%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3EOZ%3C/text%3E%3C/svg%3E","en":"data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2764%27%20height%3D%2764%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%25%27%20y1%3D%27100%25%27%20x2%3D%27100%25%27%20y2%3D%270%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f91155%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23005bff%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27url(%23g)%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2754%25%27%20font-size%3D%2726%27%20font-family%3D%27Arial%27%20font-weight%3D%27700%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3EOZ%3C/text%3E%3C/svg%3E"}}}'>
     <div class="card__side card__side_lang_ru card__side_state_opened card__layout" data-lang="ru" itemscope itemtype="http://data-vocabulary.org/Person">
       <div class="card__content card__rectangle">
-        <div class="card__logo"><span>Ozon Bank</span></div>
         <div class="card__text">
           <div class="card__title">
             <h1 class="card__name" itemprop="name">Александр Савельев</h1>
@@ -59,7 +54,7 @@
             <div class="card__tel card__tel_type_work">офис: <a class="card__phone-link" href="tel:+74951236000" itemprop="tel">+7&nbsp;495&nbsp;123-60-00</a>, доб.&nbsp;2045</div>
             <div class="card__tel card__tel_type_cellular">моб.: <a class="card__phone-link" href="tel:+79637779698" itemprop="tel">+7&nbsp;963&nbsp;777-96-98</a></div>
             <div class="card__gap"></div>
-            <div class="card__email"><a class="card__link" href="mailto:a.savelyev@ozon.bank" itemprop="email">a.savelyev@ozon.bank</a></div>
+            <div class="card__email"><a class="card__link" href="mailto:aleksandrsavelyev@ozon.ru" itemprop="email">aleksandrsavelyev@ozon.ru</a></div>
             <div class="card__gap"></div>
           </div>
           <div class="card__extra">
@@ -70,7 +65,6 @@
     </div>
     <div class="card__side card__side_lang_en card__side_state_closed card__layout" data-lang="en" itemscope itemtype="http://data-vocabulary.org/Person">
       <div class="card__content card__rectangle">
-        <div class="card__logo"><span>Ozon Bank</span></div>
         <div class="card__text">
           <div class="card__title">
             <h1 class="card__name" itemprop="name">Alexander Savelyev</h1>
@@ -81,7 +75,7 @@
             <div class="card__tel card__tel_type_work">office: <a class="card__phone-link" href="tel:+74951236000" itemprop="tel">+7&nbsp;495&nbsp;123-60-00</a> ext.&nbsp;2045</div>
             <div class="card__tel card__tel_type_cellular">mobile: <a class="card__phone-link" href="tel:+79637779698" itemprop="tel">+7&nbsp;963&nbsp;777-96-98</a></div>
             <div class="card__gap"></div>
-            <div class="card__email"><a class="card__link" href="mailto:a.savelyev@ozon.bank" itemprop="email">a.savelyev@ozon.bank</a></div>
+            <div class="card__email"><a class="card__link" href="mailto:aleksandrsavelyev@ozon.ru" itemprop="email">aleksandrsavelyev@ozon.ru</a></div>
             <div class="card__gap"></div>
           </div>
           <div class="card__extra">
@@ -90,7 +84,6 @@
         </div>
       </div>
     </div>
-    <div class="card__switch"><a class="card__link card__link_disabled_yes" href="#ru" data-lang="ru">ru</a><a class="card__link" href="#en" data-lang="en">en</a></div>
   </div>
   <script>!function(){function t(){return o[d?"availHeight":"availWidth"]}function e(){return o[d?"availWidth":"availHeight"]}function n(){return document.querySelector('meta[name="viewport"]')}function i(t){return n().setAttribute("content","width=device-width, initial-scale="+t)}function a(){return 90===Math.abs(window.orientation)}function c(){var n=t(),a=e();n>s.width&&s.height<a||i(a>n?n/s.width:a/s.height)}function r(){d=a(),c()}var s,o,d;s={width:600,height:360},o=window.screen,r(),window.addEventListener("orientationchange",r)}(),document.addEventListener("DOMContentLoaded",function(){Card.init()});var Card=function(){function t(t,e){n(t,e)||(t.className+=" "+e)}function e(t,e){if(n(t,e)){var i=t.className.split(/\s/),a=i.indexOf(e);i.splice(a,1),t.className=i.join(" ")}}function n(t,e){return-1!==t.className.split(/\s/).indexOf(e)}var i=Array.prototype.slice,a="card__side_state_opened",c="card__side_state_closed",r="card_animation",s="card_visible",o="card__link_disabled_yes";return{init:function(){function o(t){return{lang:t.dataset.lang,elem:t}}this.card=document.querySelector(".card"),this.params=JSON.parse(this.card.dataset.bem).card,this.sides=i.call(this.card.querySelectorAll(".card__side")).map(o),this.links=i.call(this.card.querySelectorAll(".card__switch .card__link")).map(o),e(this.sides[1].elem,a),t(this.sides[1].elem,c),window.addEventListener("hashchange",this._onHashChange.bind(this),!1),this._onHashChange(),setTimeout(function(){t(Card.card,r),t(Card.card,s)},0),n(document.documentElement,"mobile")||setTimeout(function(){i.call(document.querySelectorAll(".card__phone-link")).forEach(function(t){t.removeAttribute("href")})},0)},_onHashChange:function(){var t=this._getLangFromHash();t&&this.changeLang(t)},changeLang:function(t){this._changeTitle(t)._changeFavicon(t)._switchSide(t)._changeUrl(t)},_changeTitle:function(t){return document.title=this.params.titles[t],this},_changeFavicon:function(t){return document.querySelector('link[rel="shortcut icon"]').setAttribute("href",this.params.favicons[t]),this},_changeUrl:function(n){return this.links.forEach(function(i){i.lang===n?t(i.elem,o):e(i.elem,o)}),this},_switchSide:function(i){function s(){e(o,a),t(o,c),e(d,c),t(d,a)}var o,d;return this.sides[0].lang===i?(d=this.sides[0].elem,o=this.sides[1].elem):(d=this.sides[1].elem,o=this.sides[0].elem),e(d,c),n(this.card,r)?setTimeout(s,100):s(),this},_getLangFromHash:function(){var t=document.location.hash.match(/(\w{2})/);return t?t[1]:""}}}(),Metrika={init:function(t){!function(e,n,i){(n[i]=n[i]||[]).push(function(){try{n["yaCounter"+t]=new Ya.Metrika({id:t,webvisor:!0,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,trackHash:!0})}catch(e){}});var a=e.getElementsByTagName("script")[0],c=e.createElement("script"),r=function(){a.parentNode.insertBefore(c,a)};c.type="text/javascript",c.async=!0,c.src=("https:"==e.location.protocol?"https:":"http:")+"//mc.yandex.ru/metrika/watch.js","[object Opera]"==n.opera?e.addEventListener("DOMContentLoaded",r,!1):r()}(document,window,"yandex_metrika_callbacks")}};</script>
 </body>
