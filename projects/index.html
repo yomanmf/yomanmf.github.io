@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Alexander Savelyev</title>
+  <meta name="description" content="Telegram bots, e-reader tools and games created by Alexander Savelyev.">
+  <meta name="author" content="Alexander Savelyev">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#667eea">
+  <meta name="color-scheme" content="light">
+
+  <link rel="canonical" href="https://yomanmf.github.io/projects/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alexander Savelyev">
+  <meta property="og:title" content="Projects — Alexander Savelyev">
+  <meta property="og:description" content="Telegram bots, e-reader tools and games created by Alexander Savelyev.">
+  <meta property="og:url" content="https://yomanmf.github.io/projects/">
+  <meta property="og:image" content="https://yomanmf.github.io/projects/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1734">
+  <meta property="og:image:height" content="907">
+  <meta property="og:image:alt" content="Alexander Savelyev — Projects">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — Alexander Savelyev">
+  <meta name="twitter:description" content="Telegram bots, e-reader tools and games created by Alexander Savelyev.">
+  <meta name="twitter:image" content="https://yomanmf.github.io/projects/og-image.png">
+  <meta name="twitter:image:alt" content="Alexander Savelyev — Projects">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projects — Alexander Savelyev",
+    "url": "https://yomanmf.github.io/projects/",
+    "author": {
+      "@type": "Person",
+      "name": "Alexander Savelyev",
+      "url": "https://yomanmf.github.io/"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": 5,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "https://t.me/my_news_kindle_bot", "name": "My News Kindle Bot" },
+        { "@type": "ListItem", "position": 2, "url": "https://t.me/my_books_kindle_bot", "name": "My Books Kindle Bot" },
+        { "@type": "ListItem", "position": 3, "url": "https://t.me/my_manga_kindle_bot", "name": "My Manga Kindle Bot" },
+        { "@type": "ListItem", "position": 4, "url": "https://github.com/yomanmf/tetra", "name": "TETRA" },
+        { "@type": "ListItem", "position": 5, "url": "https://rekindle.website.yandexcloud.net/", "name": "ReKindle" }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --indigo: #667eea;
+      --violet: #764ba2;
+      --ink: #242038;
+      --muted: #69647a;
+      --surface: rgba(255, 255, 255, 0.95);
+      --stroke: rgba(102, 126, 234, 0.15);
+      --shadow: 0 22px 60px rgba(33, 24, 74, 0.24);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.2), transparent 28rem),
+        linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
+      padding: clamp(24px, 5vw, 64px) 20px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: clamp(48px, 8vw, 88px);
+      color: white;
+    }
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-size: 15px;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .home-link::before {
+      content: "AS";
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(8px);
+    }
+
+    .page-label {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      max-width: 760px;
+      margin-bottom: clamp(38px, 6vw, 62px);
+      color: white;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 17px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 22px;
+      font-size: clamp(46px, 9vw, 92px);
+      line-height: 0.94;
+      letter-spacing: -0.055em;
+    }
+
+    .intro {
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: clamp(17px, 2.1vw, 21px);
+      line-height: 1.55;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      position: relative;
+      display: flex;
+      min-height: 278px;
+      flex-direction: column;
+      overflow: hidden;
+      padding: clamp(24px, 4vw, 34px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+
+    .project-card::after {
+      content: attr(data-mark);
+      position: absolute;
+      top: -24px;
+      right: 8px;
+      color: rgba(102, 126, 234, 0.065);
+      font-size: 132px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.08em;
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 72px rgba(33, 24, 74, 0.31);
+    }
+
+    .project-card.featured {
+      grid-column: span 2;
+      min-height: 300px;
+      background:
+        radial-gradient(circle at 88% 30%, rgba(118, 75, 162, 0.12), transparent 18rem),
+        var(--surface);
+    }
+
+    .card-top {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 35px;
+    }
+
+    .category {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 11px;
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      color: var(--violet);
+      background: rgba(102, 126, 234, 0.07);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #37b879;
+      box-shadow: 0 0 0 4px rgba(55, 184, 121, 0.12);
+    }
+
+    .project-copy {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: clamp(24px, 3.2vw, 34px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .description {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .action {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border: 1px solid var(--stroke);
+      border-radius: 12px;
+      color: var(--indigo);
+      background: white;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .action::after {
+      content: "↗";
+      font-size: 14px;
+    }
+
+    .action.primary {
+      border-color: transparent;
+      color: white;
+      background: linear-gradient(135deg, var(--indigo), var(--violet));
+    }
+
+    .action:hover,
+    .action:focus-visible {
+      border-color: rgba(102, 126, 234, 0.4);
+      color: var(--violet);
+      background: #f6f4ff;
+      outline: none;
+    }
+
+    .action.primary:hover,
+    .action.primary:focus-visible {
+      color: white;
+      background: linear-gradient(135deg, #566fd9, #67408f);
+    }
+
+    .home-link:focus-visible {
+      border-radius: 12px;
+      outline: 3px solid rgba(255, 255, 255, 0.55);
+      outline-offset: 5px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 20px 2px 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        margin-bottom: 52px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card.featured {
+        grid-column: span 1;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      body {
+        padding-inline: 14px;
+      }
+
+      .page-label {
+        display: none;
+      }
+
+      .project-card {
+        min-height: 258px;
+        border-radius: 20px;
+      }
+
+      .project-card::after {
+        font-size: 104px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .project-card,
+      .action {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="Primary navigation">
+      <a class="home-link" href="/">Alexander Savelyev</a>
+      <span class="page-label">Independent work</span>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow">Selected projects</div>
+      <h1>Things I’ve built.</h1>
+      <p class="intro">Tools for better reading, playful breaks and making e‑ink devices more useful.</p>
+    </header>
+
+    <section class="projects" aria-label="Projects">
+      <article class="project-card" data-mark="N">
+        <div class="card-top">
+          <span class="category">Telegram bot</span>
+          <span class="status">Available</span>
+        </div>
+        <div class="project-copy">
+          <h2>My News Kindle Bot</h2>
+          <p class="description">Send news and long reads from Telegram to your Kindle for a calmer, distraction‑free read.</p>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://t.me/my_news_kindle_bot" target="_blank" rel="noopener noreferrer">Open bot</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-mark="B">
+        <div class="card-top">
+          <span class="category">Telegram bot</span>
+          <span class="status">Available</span>
+        </div>
+        <div class="project-copy">
+          <h2>My Books Kindle Bot</h2>
+          <p class="description">A simple Telegram companion for getting books onto your Kindle and into your reading queue.</p>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://t.me/my_books_kindle_bot" target="_blank" rel="noopener noreferrer">Open bot</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-mark="M">
+        <div class="card-top">
+          <span class="category">Telegram bot</span>
+          <span class="status">Available</span>
+        </div>
+        <div class="project-copy">
+          <h2>My Manga Kindle Bot</h2>
+          <p class="description">Prepare manga for an e‑ink screen and send it to Kindle without a complicated conversion workflow.</p>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://t.me/my_manga_kindle_bot" target="_blank" rel="noopener noreferrer">Open bot</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-mark="T">
+        <div class="card-top">
+          <span class="category">Game</span>
+          <span class="status">Playable</span>
+        </div>
+        <div class="project-copy">
+          <h2>TETRA</h2>
+          <p class="description">A polished falling‑block puzzle game with responsive controls, modern scoring and a little synthesized soundtrack.</p>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://tetra.website.yandexcloud.net/" target="_blank" rel="noopener noreferrer">Play TETRA</a>
+          <a class="action" href="https://github.com/yomanmf/tetra" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card featured" data-mark="R">
+        <div class="card-top">
+          <span class="category">E‑ink platform</span>
+          <span class="status">Live</span>
+        </div>
+        <div class="project-copy">
+          <h2>ReKindle</h2>
+          <p class="description">A web‑based dashboard that upgrades Kindle, Kobo and Boox devices with reading tools, productivity apps and e‑ink‑friendly games — no jailbreak required.</p>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://rekindle.website.yandexcloud.net/" target="_blank" rel="noopener noreferrer">Open ReKindle</a>
+          <a class="action" href="https://github.com/yomanmf/ReKindle" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <span>Built by Alexander Savelyev</span>
+      <span>Reading · Tools · Play</span>
+    </footer>
+  </main>
+</body>
+</html>
