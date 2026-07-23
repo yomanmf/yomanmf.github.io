@@ -6,7 +6,9 @@
   <title>Projects — Alexander Savelyev</title>
   <meta name="description" content="Telegram bots, e-reader tools and games created by Alexander Savelyev.">
   <meta name="author" content="Alexander Savelyev">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta name="bingbot" content="noindex, nofollow, noarchive">
   <meta name="theme-color" content="#667eea">
   <meta name="color-scheme" content="light">
 
@@ -301,6 +303,37 @@
       line-height: 1.6;
     }
 
+    .fork-note {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 9px;
+      margin-top: 18px;
+      padding: 9px 12px;
+      border: 1px solid rgba(118, 75, 162, 0.2);
+      border-radius: 11px;
+      color: var(--violet);
+      background: rgba(118, 75, 162, 0.08);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .fork-note::before {
+      content: "⑂";
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .fork-note:hover,
+    .fork-note:focus-visible {
+      border-color: rgba(118, 75, 162, 0.45);
+      background: rgba(118, 75, 162, 0.13);
+      outline: none;
+    }
+
     .actions {
       position: relative;
       z-index: 1;
@@ -497,6 +530,7 @@
         <div class="project-copy">
           <h2>ReKindle</h2>
           <p class="description">A web‑based dashboard that upgrades Kindle, Kobo and Boox devices with reading tools, productivity apps and e‑ink‑friendly games — no jailbreak required.</p>
+          <a class="fork-note" href="https://github.com/ReKindleOS/ReKindle" target="_blank" rel="noopener noreferrer">Fork of ReKindleOS/ReKindle</a>
         </div>
         <div class="actions">
           <a class="action primary" href="https://rekindle.website.yandexcloud.net/" target="_blank" rel="noopener noreferrer">Open ReKindle</a>
